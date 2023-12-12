@@ -13,6 +13,9 @@ the very latest versions of the following packages:
 - `OpenSSL`\* (1.1.0+) or `LibreSSL` or `libgcrypt` (not needed if legacy
   protocol is disabled)
 
+Installation on Arch Linux: `sudo pacman --needed -S base-devel meson ninja pkg-config openssl`
+Installation on Debian: `sudo apt install meson ninja-build pkg-config build-essential libssl-dev`
+
 ### No Python?
 
 If you're on a constrained system that doesn't have (or cannot run) Python, you
@@ -37,9 +40,15 @@ If packages marked by `*` are not available, tinc will fall back to its own
 vendored copies. This behavior can be disabled by setting the appropriate meson
 option to `disabled`.
 
+Installation on Arch Linux: `sudo pacman --needed -S ncurses readline zlib lzo lz4`
+Installation on Debian: `sudo apt install libncurses-dev libreadline-dev zlib1g-dev liblzo2-dev liblz4-dev`
+
 To build `info` documentation you'll also need these packages:
 
 - `texinfo` or `makeinfo`
+
+Installation on Arch Linux: `sudo pacman --needed -S texinfo`
+Installation on Debian: `sudo apt install texinfo`
 
 You might also need some additional command-line utilities to be able to run the
 integration test suite:
@@ -49,7 +58,8 @@ integration test suite:
 - `socat`
 - `netcat`
 
-Please consult your operating system's documentation for more details.
+Installation on Arch Linux: `sudo pacman --needed -S diffutils procps socat openbsd-netcat`
+Installation on Debian: `sudo apt install diffutils procps socat netcat-openbsd`
 
 ## Windows
 
